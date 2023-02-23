@@ -9,16 +9,24 @@ namespace AppApi.Controllers
     public class PruebaController:ControllerBase
     {
 
+        class Respuesta
+        {
+            public string mensaje { get; set; }
+        }
 
         [HttpPost]
-        public async Task<ActionResult> Recibir([FromBody] ArchivoDTO archivoDto)
+        public async Task<ActionResult> Recibir([FromForm] ArchivoDTO archivoDto)
         {
-
-            Console.WriteLine("procesa imagen");
-            Console.WriteLine(archivoDto.Foto);
-
-            return Ok("Image saved successfully");
+            var msj = $"archivo de {archivoDto.UserName} recibido";
+            Console.WriteLine(msj);
+            var resp = new Respuesta { mensaje = msj };
+            return Ok(resp);
         }
+
+
+
+
+
 
 
         [HttpGet]
