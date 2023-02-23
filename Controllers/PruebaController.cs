@@ -11,7 +11,7 @@ namespace AppApi.Controllers
 
 
         [HttpPost]
-        public async Task<ActionResult> Recibir([FromForm] ArchivoDTO archivoDto)
+        public async Task<ActionResult> Recibir([FromBody] ArchivoDTO archivoDto)
         {
 
             Console.WriteLine("procesa imagen");
