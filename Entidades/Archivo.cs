@@ -9,6 +9,6 @@ namespace AppApi.Entidades
         public float Latitud { get; set; }
         public float Longitud { get; set; }
         public string UserName { get; set; }
-        public string Foto { get; set; }
+        public Byte[] Foto { get; set; }
     }
 }
