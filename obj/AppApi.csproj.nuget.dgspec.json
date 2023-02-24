@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj": {}
+    "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj": {
+    "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj",
+        "projectUniqueName": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj",
         "projectName": "AppApi",
-        "projectPath": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj",
+        "projectPath": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj",
         "packagesPath": "C:\\Users\\sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\obj\\",
+        "outputPath": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +39,34 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.60.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
