@@ -6,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace AppApi.Migrations
 {
-    public partial class inicio : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +19,7 @@ namespace AppApi.Migrations
                     Latitud = table.Column<float>(type: "real", nullable: false),
                     Longitud = table.Column<float>(type: "real", nullable: false),
                     UserName = table.Column<string>(type: "text", nullable: false),
-                    Foto = table.Column<string>(type: "text", nullable: false)
+                    Foto = table.Column<byte[]>(type: "bytea", nullable: false)
                 },
                 constraints: table =>
                 {

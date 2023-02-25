@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj": {}
+    "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj": {
+    "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj",
+        "projectUniqueName": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj",
         "projectName": "AppApi",
-        "projectPath": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj",
+        "projectPath": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj",
         "packagesPath": "C:\\Users\\sergio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\obj\\",
+        "outputPath": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sergio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,17 +59,21 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.0.2, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.2, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

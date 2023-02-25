@@ -8,9 +8,14 @@ namespace AppApi.Helpers
     public class AutoMapperProfile : Profile
     {
 
+
+
         public AutoMapperProfile()
         {
-            CreateMap<Archivo, ArchivoDTO>().ReverseMap();
+            CreateMap<ArchivoDTO, Archivo>()
+                .ForMember(dest => dest.Foto, opt => opt.MapFrom(src => src.Foto.OpenReadStream()));
+
+            CreateMap<Archivo, ArchivoRespDTO>();
 
         }
     }
