@@ -5,10 +5,7 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
-using System.Reflection;
-using System.Reflection.Metadata;
-using Document = iTextSharp.text.Document;
+
 
 namespace AppApi.Controllers
 {
@@ -123,8 +120,10 @@ namespace AppApi.Controllers
             {
                 return BadRequest("Error en archivo");
             }
-                
-            string fileBase64String = Convert.ToBase64String(entidadArchivo.Foto);
+
+            string imgB64 = System.Text.Encoding.UTF8.GetString(entidadArchivo.Foto);
+
+           // byte[] imageBytes = Convert.FromBase64String(imgB64);
 
             var memoryStream = new MemoryStream();
 
@@ -133,12 +132,12 @@ namespace AppApi.Controllers
 
             PdfWriter writer = PdfWriter.GetInstance(doc, ms);
             doc.Open();
-            Image image = Image.GetInstance(fileBase64String);
+            Image image = Image.GetInstance(Convert.FromBase64String(imgB64));
             doc.Add(image);
             doc.Close();
             var stream = new MemoryStream(ms.ToArray());
             ms.Close();
-            return File(stream, "application/pdf", "MyFile.pdf");
+            return File(stream, "application/pdf", "MiPDF.pdf");
 
         }
 
