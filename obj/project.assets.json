@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "ARUTMLTH/1.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SampleDependency": "1.0.0"
+        }
+      },
       "AutoMapper/12.0.0": {
         "type": "package",
         "dependencies": {
@@ -115,6 +121,9 @@
         "runtime": {
           "lib/itextsharp.dll": {}
         }
+      },
+      "jQuery/2.1.1": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authentication.Google/6.0.0": {
         "type": "package",
@@ -520,6 +529,12 @@
           "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
         }
       },
+      "SampleDependency/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "2.1.1"
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -577,6 +592,41 @@
     }
   },
   "libraries": {
+    "ARUTMLTH/1.0.2": {
+      "sha512": "aHXNBzG8hKLmsD2a7cem8ZR+cRg15bu2JG2/GiZqs6e7kFDV8iKl7buR5nAWzKKSsVpw6vyMeNeAl7TW92I+bw==",
+      "type": "package",
+      "path": "arutmlth/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        ".vs/Test/DesignTimeBuild/.dtbcache.v2",
+        ".vs/Test/v16/TestStore/0/000.testlog",
+        ".vs/Test/v16/TestStore/0/testlog.manifest",
+        "Test.sln",
+        "Test/Class1.cs",
+        "Test/Test.csproj",
+        "Test/bin/Debug/netstandard2.0/ARUTAMLTH.deps.json",
+        "Test/bin/Debug/netstandard2.0/ARUTAMLTH.dll",
+        "Test/bin/Debug/netstandard2.0/ARUTAMLTH.pdb",
+        "Test/obj/Debug/netstandard2.0/.NETStandard,Version=v2.0.AssemblyAttributes.cs",
+        "Test/obj/Debug/netstandard2.0/ARUTAMLTH.dll",
+        "Test/obj/Debug/netstandard2.0/ARUTAMLTH.pdb",
+        "Test/obj/Debug/netstandard2.0/Test.AssemblyInfo.cs",
+        "Test/obj/Debug/netstandard2.0/Test.AssemblyInfoInputs.cache",
+        "Test/obj/Debug/netstandard2.0/Test.assets.cache",
+        "Test/obj/Debug/netstandard2.0/Test.csproj.CoreCompileInputs.cache",
+        "Test/obj/Debug/netstandard2.0/Test.csproj.FileListAbsolute.txt",
+        "Test/obj/Debug/netstandard2.0/Test.csprojAssemblyReference.cache",
+        "Test/obj/Test.csproj.nuget.dgspec.json",
+        "Test/obj/Test.csproj.nuget.g.props",
+        "Test/obj/Test.csproj.nuget.g.targets",
+        "Test/obj/project.assets.json",
+        "Test/obj/project.nuget.cache",
+        "arutmlth.1.0.2.nupkg.sha512",
+        "arutmlth.nuspec",
+        "nuget.exe"
+      ]
+    },
     "AutoMapper/12.0.0": {
       "sha512": "0Rmg0zI5AFu1O/y//o9VGyhxKjhggWpk9mOA1tp0DEVx40c61bs+lnQv+0jUq8XbniF7FKgIVvI1perqiMtLrA==",
       "type": "package",
@@ -723,6 +773,26 @@
         "lib/iTextSharp.xml",
         "lib/itextsharp.dll",
         "notice.txt"
+      ]
+    },
+    "jQuery/2.1.1": {
+      "sha512": "/cy0NGAGBx0W6XLqrnehQAKeJhfnZLDdPnBvlNLq/k4mraD1a7rbHBYzV5PYBaz9t5wh+VrGhPUbPztvnFAOrQ==",
+      "type": "package",
+      "path": "jquery/2.1.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-2.1.1-vsdoc.js",
+        "Content/Scripts/jquery-2.1.1.js",
+        "Content/Scripts/jquery-2.1.1.min.js",
+        "Content/Scripts/jquery-2.1.1.min.map",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-2.1.1.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.2.1.1.nupkg.sha512",
+        "jquery.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Authentication.Google/6.0.0": {
@@ -1288,6 +1358,18 @@
         "postgresql.png"
       ]
     },
+    "SampleDependency/1.0.0": {
+      "sha512": "rkrKnTI2KT/L+BaaB6/xZbDiqyQ702TxYp5adqgC/GYU7KBufnNArz/5KNetThpOeXmVEMg0VlFU+9/cKz0L4w==",
+      "type": "package",
+      "path": "sampledependency/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/nugetexample.js",
+        "sampledependency.1.0.0.nupkg.sha512",
+        "sampledependency.nuspec"
+      ]
+    },
     "System.Collections.Immutable/6.0.0": {
       "sha512": "l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "type": "package",
@@ -1364,6 +1446,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ARUTMLTH >= 1.0.2",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Google.Apis.Auth >= 1.60.0",
       "Microsoft.AspNetCore.Authentication.Google >= 6.0.0",
@@ -1418,6 +1501,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "ARUTMLTH": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.0, )"

@@ -11,14 +11,15 @@ namespace AppApi.Controllers
 {
     [ApiController]
     [Route("pruebas")]
-    public class PruebaController:ControllerBase
+    public class PruebaController : ControllerBase
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
-
+        private readonly HttpClient _client;
         public PruebaController(ApplicationDbContext context, IMapper mapper) {
             this.context = context;
             this.mapper = mapper;
+            this._client = new HttpClient();
         }
 
         class Respuesta
@@ -45,7 +46,7 @@ namespace AppApi.Controllers
                 using (var item = new MemoryStream())
                 {
                     file.CopyTo(item);
-                    fileByteArray = item.ToArray(); 
+                    fileByteArray = item.ToArray();
                 }
             }
 
@@ -79,7 +80,7 @@ namespace AppApi.Controllers
                 Console.WriteLine(ex.Message);
                 return BadRequest();
             }
-           
+
         }
 
 
@@ -88,13 +89,15 @@ namespace AppApi.Controllers
 
 
 
-        [HttpGet]
-        public async Task<ActionResult> Prueba()
+        [HttpGet("lat/{lat}/longitud/{longitud}")]
+        public async Task<ActionResult> clime(string lat, string longitud)
         {
+            var key = "47b8917d2f87285fb9d5c378d38aed50";
+            var response = await _client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={longitud}&appid={key}");
+            var content = await response.Content.ReadAsStringAsync();
+            Console.WriteLine($"latitud {lat} y {longitud} recibida");
 
-            Console.WriteLine("lógica del get");
-
-            return Ok("Ok");
+            return Ok(content);
         }
 
         [HttpGet("{id:int}")]

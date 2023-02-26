@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "AppApi/1.0.0": {
         "dependencies": {
+          "ARUTMLTH": "1.0.2",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "Google.Apis.Auth": "1.60.0",
           "Microsoft.AspNetCore.Authentication.Google": "6.0.0",
@@ -18,6 +19,11 @@
         },
         "runtime": {
           "AppApi.dll": {}
+        }
+      },
+      "ARUTMLTH/1.0.2": {
+        "dependencies": {
+          "SampleDependency": "1.0.0"
         }
       },
       "AutoMapper/12.0.0": {
@@ -108,6 +114,7 @@
           }
         }
       },
+      "jQuery/2.1.1": {},
       "Microsoft.AspNetCore.Authentication.Google/6.0.0": {
         "runtime": {
           "lib/net6.0/Microsoft.AspNetCore.Authentication.Google.dll": {
@@ -315,6 +322,11 @@
           }
         }
       },
+      "SampleDependency/1.0.0": {
+        "dependencies": {
+          "jQuery": "2.1.1"
+        }
+      },
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
@@ -333,6 +345,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ARUTMLTH/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aHXNBzG8hKLmsD2a7cem8ZR+cRg15bu2JG2/GiZqs6e7kFDV8iKl7buR5nAWzKKSsVpw6vyMeNeAl7TW92I+bw==",
+      "path": "arutmlth/1.0.2",
+      "hashPath": "arutmlth.1.0.2.nupkg.sha512"
     },
     "AutoMapper/12.0.0": {
       "type": "package",
@@ -389,6 +408,13 @@
       "sha512": "sha512-vtnMhTEJdZFCkLqaQLjD8aqTBIVKHPrSFuSXnxbLEJlvE/j/l88fvG9wtsejXTmhtErMo0lA9T2LdfdfbwplYw==",
       "path": "itextsharp/5.5.13.3",
       "hashPath": "itextsharp.5.5.13.3.nupkg.sha512"
+    },
+    "jQuery/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/cy0NGAGBx0W6XLqrnehQAKeJhfnZLDdPnBvlNLq/k4mraD1a7rbHBYzV5PYBaz9t5wh+VrGhPUbPztvnFAOrQ==",
+      "path": "jquery/2.1.1",
+      "hashPath": "jquery.2.1.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Google/6.0.0": {
       "type": "package",
@@ -564,6 +590,13 @@
       "sha512": "sha512-2snTLONAs26dKdtInX4CAorkE//eDMOAVifh2EXZ/REzq5typb7MkENIix3Ma6ycukmAzCUw+br2AFdXmkmxbw==",
       "path": "npgsql.entityframeworkcore.postgresql/6.0.2",
       "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.2.nupkg.sha512"
+    },
+    "SampleDependency/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rkrKnTI2KT/L+BaaB6/xZbDiqyQ702TxYp5adqgC/GYU7KBufnNArz/5KNetThpOeXmVEMg0VlFU+9/cKz0L4w==",
+      "path": "sampledependency/1.0.0",
+      "hashPath": "sampledependency.1.0.0.nupkg.sha512"
     },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",
