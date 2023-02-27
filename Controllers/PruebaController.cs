@@ -94,12 +94,20 @@ namespace AppApi.Controllers
         [HttpGet("clima/lat/{lat}/longitud/{longitud}")]
         public async Task<ActionResult> clime(string lat, string longitud)
         {
-            var key = Environment.GetEnvironmentVariable("ApiKey");
-            var response = await _client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={longitud}&appid={key}&lang=es");
-            var content = await response.Content.ReadAsStringAsync();
-            Console.WriteLine($"latitud {lat} y {longitud} recibida");
+            try
+            {
+                var key = Environment.GetEnvironmentVariable("ApiKey");
+                var response = await _client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={longitud}&appid={key}&lang=es");
+                var content = await response.Content.ReadAsStringAsync();
+                Console.WriteLine($"latitud {lat} y {longitud} recibida");
 
-            return Ok(content);
+                return Ok(content);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+           
         }
 
         [HttpGet("{id:int}")]
