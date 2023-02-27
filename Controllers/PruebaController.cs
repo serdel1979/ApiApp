@@ -15,10 +15,12 @@ namespace AppApi.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
+        private readonly IConfiguration configuration;
         private readonly HttpClient _client;
-        public PruebaController(ApplicationDbContext context, IMapper mapper) {
+        public PruebaController(ApplicationDbContext context, IMapper mapper, IConfiguration configuration) {
             this.context = context;
             this.mapper = mapper;
+            this.configuration = configuration;
             this._client = new HttpClient();
         }
 
@@ -92,7 +94,7 @@ namespace AppApi.Controllers
         [HttpGet("clima/lat/{lat}/longitud/{longitud}")]
         public async Task<ActionResult> clime(string lat, string longitud)
         {
-            var key = "47b8917d2f87285fb9d5c378d38aed50";
+            var key = Environment.GetEnvironmentVariable("ApiKey");
             var response = await _client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={longitud}&appid={key}&lang=es");
             var content = await response.Content.ReadAsStringAsync();
             Console.WriteLine($"latitud {lat} y {longitud} recibida");
@@ -118,16 +120,12 @@ namespace AppApi.Controllers
         {
 
             var entidadArchivo = await context.Archivos.Where(x => x.Id == id).FirstAsync();
-
             if (entidadArchivo == null || entidadArchivo.Foto.Length == 0)
             {
                 return BadRequest("Error en archivo");
             }
 
             string imgB64 = System.Text.Encoding.UTF8.GetString(entidadArchivo.Foto);
-
-           // byte[] imageBytes = Convert.FromBase64String(imgB64);
-
             var memoryStream = new MemoryStream();
 
             MemoryStream ms = new MemoryStream();
