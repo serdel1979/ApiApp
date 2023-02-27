@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j52iz7WTp5G/rOJS38VV1IvB82RwtFiN2j63CcS7MyTg/76L3tBJUDiN3pkYI5NiINaXen+vs1BjEVhqGTJVJg==",
+  "dgSpecHash": "Ey4GuI/Q95ZDN3vFe23xsZtCYmPYKvmU7b4bqUESDv2HBiQdrH/QyVstOdEm4AyDUfVJ0ZGjW0kNrBpw8fbsAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sergio\\Desktop\\IONIC\\ApiApp\\AppApi.csproj",
+  "projectFilePath": "C:\\Users\\sergio\\Desktop\\dotnet\\Appmov\\AppApi\\AppApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sergio\\.nuget\\packages\\arutmlth\\1.0.2\\arutmlth.1.0.2.nupkg.sha512",
     "C:\\Users\\sergio\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",

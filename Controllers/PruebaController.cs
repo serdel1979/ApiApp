@@ -15,10 +15,12 @@ namespace AppApi.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
+        private readonly IConfiguration Configuration;
         private readonly HttpClient _client;
-        public PruebaController(ApplicationDbContext context, IMapper mapper) {
+        public PruebaController(ApplicationDbContext context, IMapper mapper, IConfiguration Configuration) {
             this.context = context;
             this.mapper = mapper;
+            this.Configuration = Configuration;
             this._client = new HttpClient();
         }
 
@@ -94,7 +96,7 @@ namespace AppApi.Controllers
         {
             try
             {
-                var key = Environment.GetEnvironmentVariable("ApiKey");
+                var key = Configuration.GetValue<string>("ApiKey");
                 var response = await _client.GetAsync($"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={longitud}&appid={key}&lang=es");
                 var content = await response.Content.ReadAsStringAsync();
                 Console.WriteLine($"latitud {lat} y {longitud} recibida");
