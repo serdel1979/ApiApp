@@ -15,12 +15,10 @@ namespace AppApi.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
-        private readonly IConfiguration configuration;
         private readonly HttpClient _client;
-        public PruebaController(ApplicationDbContext context, IMapper mapper, IConfiguration configuration) {
+        public PruebaController(ApplicationDbContext context, IMapper mapper) {
             this.context = context;
             this.mapper = mapper;
-            this.configuration = configuration;
             this._client = new HttpClient();
         }
 
@@ -124,7 +122,7 @@ namespace AppApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Archivo>> GetPrueba()
+        public async Task<ActionResult> GetPrueba()
         {
 
           
