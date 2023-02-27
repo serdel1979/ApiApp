@@ -53,12 +53,12 @@ namespace AppApi
 
             app.UseCors("AllowAll");
 
-            //app.UseHttpsRedirection();
+            app.UseHttpsRedirection();
 
-           // app.UseRouting();
+            app.UseRouting();
 
 
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
