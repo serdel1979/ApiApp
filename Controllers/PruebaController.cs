@@ -123,6 +123,14 @@ namespace AppApi.Controllers
             return Ok(entidadArchivo);
         }
 
+        [HttpGet]
+        public async Task<ActionResult<Archivo>> GetPrueba()
+        {
+
+          
+            return Ok("Todo ok");
+        }
+
         [HttpGet("pdf/{id:int}")]
         public async Task<ActionResult<Archivo>> GetPdf(int id)
         {
